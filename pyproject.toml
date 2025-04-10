@@ -1,0 +1,30 @@
+[project]
+name = "cao2"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Praveen",email = "praveenkumar.e2022@vitstudent.ac.in"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    "torch (>=2.4.0+cu124,<3.0.0)",
+    "torchvision (>=0.21.0+cu124,<0.22.0)",
+    "ultralytics (>=8.3.105,<9.0.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+
+[tool.poetry.dependencies]
+torch = {source = "pytorch"}
+torchvision = {source = "pytorch"}
